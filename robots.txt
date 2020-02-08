@@ -1,0 +1,25 @@
+# # # # # # # # # # #
+# What is robots.txt?
+# robots.txt is a file that lives at a site's root (/). 
+# Following the Robots Exclusion Standard, web crawlers are programmed to avoid certain website parts.
+# It's a relatively simple file, kind of confusing though.
+# If you're confused, check out this tutorial made by Google:
+# https://support.google.com/webmasters/answer/6062596?hl=en
+
+# Rule 1 -  no crawlers are allowed to go to any of the website but Googlebot and friends
+User-agent: Googlebot
+User-agent: Googlebot-Images
+User-agent: Googlebot-News
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: *
+Disallow: /
+
+# Rule 2 - all bots are not allowed to go to a directory called nobots and can't see a file called nobots.html either
+User-agent: *
+Disallow: /nobots*
+
+# Rule 3 - AdSense is allowed to see /nobots/ads.html, passing through the nobots rule
+User-agent: Mediapartners-Google
+Allow: /nobots/ads.html
