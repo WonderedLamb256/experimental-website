@@ -23,3 +23,6 @@ Disallow: /nobots*
 # Rule 3 - AdSense is allowed to see /nobots/ads.html, passing through the nobots rule
 User-agent: Mediapartners-Google
 Allow: /nobots/ads.html
+
+# Sitemap Rule - Sitemap rule is a rule for search engine crawlers like Googlebot. It shows all of the sites Google needs to see.
+Sitemap: https://wonderedlamb256.github.io/experimental-website/sitemap.xml
